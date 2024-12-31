@@ -3,6 +3,7 @@ name: Resumen Semanal de Estudio
 on:
   schedule:
     - cron: '0 18 * * 5' # Cada viernes a las 18:00
+  workflow_dispatch:
 
 jobs:
   generar-resumen:
