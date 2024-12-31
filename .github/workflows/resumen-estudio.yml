@@ -1,0 +1,16 @@
+name: Resumen Semanal de Estudio
+
+on:
+  schedule:
+    - cron: '0 18 * * 5' # Cada viernes a las 18:00
+
+jobs:
+  generar-resumen:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v3
+
+    - name: Ejecutar script para generar resumen
+      run: python scripts/generar-resumen.py
